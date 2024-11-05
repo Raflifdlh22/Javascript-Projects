@@ -43,6 +43,13 @@ const routes = [
     },
   },
   {
+    method: '*',
+    path: '/{any*}',
+    handler: (request, h) => {
+      return 'Halaman tidak ditemukan';
+    },
+  },
+  {
     method: "POST",
     path: "/login",
     handler: (request, h) => {
